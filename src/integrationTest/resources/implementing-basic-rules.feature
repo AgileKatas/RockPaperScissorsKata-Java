@@ -39,4 +39,4 @@ Feature: Implementing the Basic Rules
       | myMove   | theirMove | result |
       | rock     | rock      | draw   |
       | scissors | scissors  | draw   |
-      | paper    | scissors  | draw   |
+      | paper    | paper     | draw   |
