@@ -1,7 +1,4 @@
-Feature: Rock Beats Scissors
-  As a player
-  I want rock to beat scissors
-  So that I can play with rules I'm familiar with
+Feature: Implementing the Basic Rules
 
   Scenario Outline: Rock beats scissors
     Given I have chosen <myMove>
