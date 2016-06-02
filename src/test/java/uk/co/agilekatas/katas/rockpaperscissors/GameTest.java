@@ -68,4 +68,34 @@ public class GameTest {
     assertThat(result).isEqualTo("lose");
   }
 
+  @Test
+  public void returnsDrawWhenPlayingRockAgainstRock() {
+    String myMove = "rock";
+    String theirMove = "rock";
+
+    String result = game.play(myMove, theirMove);
+
+    assertThat(result).isEqualTo("draw");
+  }
+
+  @Test
+  public void returnsDrawWhenPlayingScissorsAgainstScissors() {
+    String myMove = "scissors";
+    String theirMove = "scissors";
+
+    String result = game.play(myMove, theirMove);
+
+    assertThat(result).isEqualTo("draw");
+  }
+
+  @Test
+  public void returnsDrawWhenPlayingPaperAgainstPaper() {
+    String myMove = "paper";
+    String theirMove = "paper";
+
+    String result = game.play(myMove, theirMove);
+
+    assertThat(result).isEqualTo("draw");
+  }
+
 }
