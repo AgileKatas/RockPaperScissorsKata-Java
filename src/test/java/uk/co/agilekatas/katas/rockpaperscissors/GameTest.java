@@ -27,4 +27,25 @@ public class GameTest {
 
     assertThat(result).isEqualTo("lose");
   }
+
+  @Test
+  public void returnsWinWhenPlayingScissorsAgainstPaper() {
+    String myMove = "scissors";
+    String theirMove = "paper";
+
+    String result = game.play(myMove, theirMove);
+
+    assertThat(result).isEqualTo("win");
+  }
+
+  @Test
+  public void returnLoseWhenPlayingPaperAgainstScissors() {
+    String myMove = "paper";
+    String theirMove = "scissors";
+
+    String result = game.play(myMove, theirMove);
+
+    assertThat(result).isEqualTo("lose");
+  }
+
 }
