@@ -29,3 +29,14 @@ Feature: Implementing the Basic Rules
       | myMove | theirMove | result |
       | paper  | rock      | win    |
       | rock   | paper     | lose   |
+
+  Scenario Outline: Same moves result in a draw
+    Given I have chosen <myMove>
+    When the opponent chooses <theirMove>
+    Then I should <result>
+
+    Examples:
+      | myMove   | theirMove | result |
+      | rock     | rock      | draw   |
+      | scissors | scissors  | draw   |
+      | paper    | scissors  | draw   |
