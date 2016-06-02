@@ -7,6 +7,8 @@ public class Game {
       return "win";
     if (myMove.equals("scissors") && theirMove.equals("paper"))
       return "win";
+    if (myMove.equals("paper") && theirMove.equals("rock"))
+      return "win";
     return "lose";
   }
 

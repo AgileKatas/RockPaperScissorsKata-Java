@@ -48,4 +48,24 @@ public class GameTest {
     assertThat(result).isEqualTo("lose");
   }
 
+  @Test
+  public void returnsWinWhenPlayingPaperAgainstRock() {
+    String myMove = "paper";
+    String theirMove = "rock";
+
+    String result = game.play(myMove, theirMove);
+
+    assertThat(result).isEqualTo("win");
+  }
+
+  @Test
+  public void returnsLoseWhenPlayingRockAgainstPaper() {
+    String myMove = "rock";
+    String theirMove = "paper";
+
+    String result = game.play(myMove, theirMove);
+
+    assertThat(result).isEqualTo("lose");
+  }
+
 }
